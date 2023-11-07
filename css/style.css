@@ -1,7 +1,19 @@
+*{
+    margin: 0;
+}
 body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(33, 33, 33);
 }
 
 svg {
+    margin-left: 15%;
+    margin-top: 5vh;
     border: 2px solid white;
+}
+
+#start {
+width: 5vw;
+margin-left: 45.5vw;
+margin-top: 3vh;
 }
