@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pong Game</title>
+    <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <button id="start">Start</button>
-    <svg width="1000" height="600">
-        <text id="scorePlayer1" x="25" y="25" fill="white">0</text>
-        <text id="scorePlayer2" x="965" y="25" fill="white">0</text>
-        <circle id="miCirculo" cx="50" cy="50" r="7" fill="blue" />
-        <rect id="player1" x="10" y="260" width="15" height="80"  />
-        <rect id="player2" x="975" y="260" width="15" height="80"  />
-        <line x1="500" y1="0" x2="500" y2="600" style="stroke:white;stroke-width:2" />
-    </svg>
+    <div>
+        <button class="button" id="startButton">
+            <p>Iniciar Juego</p>
+          </button>
+        <svg width="1000" height="600">
+            <circle id="miCirculo" cx="50" cy="50" r="10" fill="white" />
+            <rect id="player1" x="10" y="260" width="15" height="80" fill="red" />
+            <rect id="player2" x="965" y="260" width="15" height="80" fill="green" />
+            <text id="score1" x="100" y="30" font-size="24" fill="red">0</text>
+            <text id="score2" x="900" y="30" font-size="24" fill="green">0</text>
+        </svg>
+    </div>
+
+    <script src="svg.js"></script>
+
 </body>
-<script src="script.js"></script>
 </html>
