@@ -8,6 +8,7 @@
 svg {
     border: 5px solid blue;
     background-color: rgb(33, 33, 33);
+    box-shadow: 0 0 10px blue;
 }
 
 body {
@@ -27,6 +28,18 @@ div {
     
 }
 
+#gameOverMessage {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
 .button {
     all: unset;
     display: flex;
@@ -42,21 +55,21 @@ div {
     overflow: hidden;
     transition: border 300ms, color 300ms;
     user-select: none;
-  }
+}
   
-  .button p {
+.button p {
     z-index: 1;
-  }
-  
-  .button:hover {
+}
+
+.button:hover {
     color: #212121;
-  }
-  
-  .button:active {
+}
+
+.button:active {
     border-color: rgb(0, 132, 255);
-  }
-  
-  .button::after, .button::before {
+}
+
+.button::after, .button::before {
     content: "";
     position: absolute;
     width: 9em;
@@ -65,27 +78,27 @@ div {
     opacity: 50%;
     border-radius: 50%;
     transition: transform 500ms, background 300ms;
-  }
-  
-  .button::before {
+}
+
+.button::before {
     left: 0;
     transform: translateX(-8em);
-  }
-  
-  .button::after {
+}
+
+.button::after {
     right: 0;
     transform: translateX(8em);
-  }
-  
-  .button:hover:before {
+}
+
+.button:hover:before {
     transform: translateX(-1em);
-  }
-  
-  .button:hover:after {
+}
+
+.button:hover:after {
     transform: translateX(1em);
-  }
-  
-  .button:active:before,
-  .button:active:after {
+}
+
+.button:active:before,
+.button:active:after {
     background: teal;
-  }
+}

@@ -30,6 +30,8 @@ function startGame() {
     document.getElementById("score2").textContent = score2;
     clearInterval(gameInterval);
     gameInterval = setInterval(mueveCirculo, 1);
+    var gameOverMessage = document.getElementById('gameOverMessage');
+    gameOverMessage.style.display = 'none';
 }
 
 
@@ -96,7 +98,21 @@ function mueveCirculo() {
 
     if (score1 === 10 || score2 === 10) {
         clearInterval(gameInterval);
-        alert('Game Over');
+        var gameOverMessage = document.getElementById('gameOverMessage');
+        if (score1 === 10) {
+            gameOverMessage.textContent = 'Jugador 1 ha ganado!';
+            gameOverMessage.style.color = 'red';
+            gameOverMessage.style.border = '2px solid red';
+            gameOverMessage.style.boxShadow = '0 0 10px red';
+        } else {
+            gameOverMessage.textContent = 'Jugador 2 ha ganado!';
+            gameOverMessage.style.color = 'green';
+            gameOverMessage.style.border = '2px solid green';
+            gameOverMessage.style.boxShadow = '0 0 10px green';
+
+
+        }
+        gameOverMessage.style.display = 'block';
     }
 }
 
