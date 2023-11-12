@@ -1,3 +1,3 @@
 # Pong-Game
 
-!(img/InicioJuego.png)
+![](img/InicioJuego.png)
